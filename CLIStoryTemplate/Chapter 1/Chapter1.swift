@@ -6,5 +6,7 @@
 import Foundation
 
 func chapterOne() {
-    // Your portion of the story goes here
+    // Foster Thompson
+    //Chapter 1
+    //Optimism about reality
 }
