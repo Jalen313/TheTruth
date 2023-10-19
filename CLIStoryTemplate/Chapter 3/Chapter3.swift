@@ -7,12 +7,10 @@ import Foundation
 
 func chapterThree() {
     // Your portion of the story goes here
-    print("fjsfjjhhjhjf")
-    
-    func Words (firstIngridient: String, secondIngridient: String)
+ 
 
-    {
-        let thisUploadCorrectly = "I don't like GitHub"
-    }
     
+
+        let story = (" Then the voice of fig tells him he has to figure out a way to save the school. So Jalen gathers everyone together to come up with a game plan Spires goes up to a couple of people in the academy to talk about different options to pursue. Spires gets together one team and has them evacuate a team")
+        print (story)
 }
