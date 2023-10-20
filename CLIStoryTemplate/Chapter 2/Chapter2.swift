@@ -19,5 +19,5 @@ func chapterTwo() {
     print("Infact the countdown timer was now present on all of screens in the academy.")
     print("Stunned, Spires checks his phone again.")
     print("The timer seemed to be counting down from 60 minutes.")
-    print("It read 58 minutes 30 seconds and matched the rest og the screens he could see from the foyer.")
+    print("It read 58 minutes 30 seconds and matched the rest of the screens he could see from the foyer.")
 }
