@@ -11,5 +11,7 @@ func chapterTwo() {
     print("The familiar smell of coffee filled the lobby.")
     print("Spires presented his security badge and entered the turnstyle, as ususual.")
     print("The smell of coffee waifed into the elevator behind him.")
-    print ("")
+    print("The ride to the Academy door was shorter than usual as his mind drifted to thoughts of the weekend and last nights cruible of affluence. ")
+    print ("As he powered up his iphone to use the attendence monitor app, he noticed that even fewer students than normal where in the main space.")
+    print("")
 }
