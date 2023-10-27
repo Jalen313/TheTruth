@@ -19,6 +19,7 @@ func chapterThree() {
     }
     
     func timerProgression()
+    
     {
         switch timer {
         case 55:
@@ -52,6 +53,7 @@ func chapterThree() {
     }
     
     
+    var agentTools = ["phone", "map", "Badge ID"]
     
     let timerStarts = true
     if timerStarts == true {print("The school is in danger and you have to figure out a way to save it")}
@@ -62,14 +64,18 @@ func chapterThree() {
     print("\(agent)feeling as if he triggered this starts to worry about what could happen")
     print("\(agent)decides to get everyone together to figure out what's going on")
     print("In the midst of presentation a mysterious voice who dubebd themselves as the voice of Fig has given short advice on what to do in a cryptic way")
-    print("The voice said 'When the timer  reaches 0 all servers will be wiped and the academy \n will be no more")
+    print("The voice said 'When the timer  reaches 0 all servers will be wiped and the academy  will be no more")
+    print("Rushing around Spires dropped his \(agentTools[2])")
+    agentTools.append("Badge ID")
+    
+    
+    print (agentTools)
     print("Figure out how to fix the problem or eveyrthing will be lost")
     print("Spires decides to make a small team to investigate the server room")
     
     timer = 50
     timerProgression()
     timer = 45
-    timerProgression()
     timerProgression()
     
     
