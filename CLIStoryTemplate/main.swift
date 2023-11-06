@@ -6,11 +6,11 @@
 import Foundation
 
 func readStory() {
-    chapterOne()
+//    chapterOne()
     chapterTwo()
     chapterThree()
-    chapterFour()
-    chapterFive()
+//    chapterFour()
+//    chapterFive()
 }
 
 readStory()
