@@ -5,6 +5,7 @@
 
 import Foundation
 
+var ideas: String? = nil
 let Name:String = "Foster"
 let Age:Int = 30
 let MinutesLate:Double = 22.5
@@ -15,6 +16,42 @@ let Description: String = "Spires was a better spy than Foster and was always lo
 var elevatorFloorList: [String] = ["Floor One", "Floor Two", "Floor Three"]
 var waitingList:String = "Waiting..."
 let complainWords = ["Dang", "Darn", "Crap", "Tarter Sauce", "Screw This"]
+var randomNumberGenerator = SystemRandomNumberGenerator()
+
+enum TimeLate: Int {
+    case fifteenminutes = 0
+    case halfanhour = 1
+    case fortyfiveminutes = 2
+    case hour = 3
+}
+
+func noIdeas() {
+    if ideas == nil {
+        print("Foster was out of ideas")
+    }
+}
+
+func randomTimeLateMessage()
+// Generate a random number between 0 and 3 (inclusive)
+{
+let randomTimeNumber = Int(Double.random(in: 0...3))
+    
+    if let randomTimeLate = TimeLate(rawValue: randomTimeNumber) {
+        switch randomTimeLate {
+            case .fifteenminutes:
+                print("15 minutes passed")
+            case .halfanhour:
+                print("Half an hour passed")
+            case .fortyfiveminutes:
+                print("45 minutes passed")
+            case .hour:
+                print("An hour passed")
+        }
+    } else {
+        print("Failed to pick a random time late.")
+    }
+}
+
 
 
 func listByAdding(item: String, towaitingList: String) -> String {
@@ -41,6 +78,7 @@ func chapterOne() {
     print("He opened the door and entered the elevator. He had forgot to press the floor button and was trapped in the elevator for \(MinutesLate) minutes")
     
     print(elevatorFloorList.count)
+    randomTimeLateMessage()
     //print("\(elevatorFloorList)")
     print(elevatorFloorList[0])
     print(elevatorFloorList[1])
@@ -48,6 +86,8 @@ func chapterOne() {
     
     waitingList = listByAdding(item:"Still Waiting...", towaitingList: waitingList);
     waitingList += "\n" + "And Still Waiting...";
+    
+    noIdeas()
     
 //For, While, Repeat-While, For-Each, For Case
     for i in 0..<complainWords.count {
