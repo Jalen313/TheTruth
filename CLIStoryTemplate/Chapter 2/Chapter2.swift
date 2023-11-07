@@ -19,8 +19,7 @@ func chapterTwo() {
     
     let MainFloor = ElevatorFloors(floorNumber: 2, floorName: "main entrance")
     let ThirdFloor = ElevatorFloors(floorNumber: 3, floorName: "BreakRoom")
-    
-    
+        
     func chapterTwo(){
         func listByAdding(item: String, toList: String) -> String {
             return toList + "\n" + item
