@@ -7,56 +7,55 @@ import Foundation
 func chapterFive() {
     
     // Enum to represent success or failure
-    enum Emotion {
-        case Sadness(String)
-        case Happiness(String)
+    enum Outcome {
+        case success(String)
+        case failure(String)
     }
     
     // Struct to represent the character Spires
     struct Character {
-        var name = "Spires"
-        var rememberedCode = "Spires remembered code"
+        var name: String
+        var rememberedCode: String?
     }
     
     // Constants
     let characterName = "Spires"
-    let academyCode = "SwiftFun"
+    let academyCode = "42K9P3X7"
     let totalTime = 10
     let timeRemaining = totalTime
     
     // Variables
-    var Time = "10 seconds"
-    var story = "Time was clicking down. No one knew what to do."
-    var spires = Character(name: characterName)
+    var storyPart = "Time was clicking down. No one knew what to do."
+    var spires = Character(name: characterName, rememberedCode: nil)
     
     // Function to simulate Spires typing the code
-    func typeCode() -> Emotion {
+    func typeCode() -> Outcome {
         guard spires.name == characterName else {
-            return .Happiness("This isn't \(characterName)!")
+            return .failure("This isn't \(characterName)!")
         }
         
         for seconds in (0...totalTime).reversed() {
             if seconds == timeRemaining {
                 spires.rememberedCode = academyCode
-                return .Sadness("Suddenly, \(characterName) remembered the code from the academy,which was \(academyCode) and typed it in the last \(timeRemaining) seconds. The day is saved!")
+                return .success("Suddenly, \(characterName) remembered the code from the academy and typed it in the last \(timeRemaining) seconds. The day is saved!")
             }
         }
         
-        return .Happiness("Time ran out, and \(characterName) couldn't remember the code.")
+        return .failure("Time ran out, and \(characterName) couldn't remember the code.")
     }
     
     // Simulate the story
-    story = "Time was clicking down. No one knew what to do. Everyone's faces was blurred with sadness and worry."
+    storyPart = "Time was clicking down. No one knew what to do. Everyone's faces was blurred with sadness and worry."
     
-    print(story)
+    print(storyPart)
     
-    let end = typeCode()
-    switch end {
-    case .Sadness(let story1):
-        story = story1
-    case .Happiness(let story1):
-        story = story1
+    let outcome = typeCode()
+    switch outcome {
+    case .success(let message):
+        storyPart = message
+    case .failure(let message):
+        storyPart = message
     }
     
-    print(story)
+    print(storyPart)
 }
